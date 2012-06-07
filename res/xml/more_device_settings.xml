@@ -71,4 +71,13 @@
             android:targetClass="com.cyanogenmod.settings.device.TouchscreenGestureSettings" />
     </Preference>
 
+    <!-- Oppo Touchscreen gestures -->
+    <Preference
+        android:key="oppo_advanced_settings">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.omnirom.device.DeviceSettings"
+                android:targetPackage="org.omnirom.device" />
+    </Preference>
+
 </PreferenceScreen>
