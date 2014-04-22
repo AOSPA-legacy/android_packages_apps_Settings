@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--Notification LED category header-->
-    <string name="notification_led_category_title">Notificação LED</string>
+    <string name="notification_led_category_title">LED de notificações</string>
 
     <!--Notification light dialogs-->
     <string name="edit_light_settings">Editar configurações de luz</string>
@@ -32,7 +32,7 @@
 
     <!--Display settings screen, notification light settings-->
     <string name="notification_light_ok">OK</string>
-    <string name="notification_light_reset">Resete</string>
+    <string name="notification_light_reset">Resetar</string>
     <string name="notification_light_general_title">Geral</string>
     <string name="notification_light_applist_title">Aplicações</string>
     <string name="notification_light_phonelist_title">Fone</string>
@@ -72,7 +72,7 @@
     <string name="increasing_ring_min_volume_title">Volume do início do toque</string>
     <string name="increasing_ring_volume_notice">Aviso:\nSe o volume inicial for maior que volume padrão definido do toque, o toque irá reproduzir usando o volume padrão definido</string>
     <string name="increasing_ring_interval_title">Intervalo de aumento</string>
-    <string name="increasing_ring_interval_eachring">Em cada toque</string>
+    <string name="increasing_ring_interval_eachring">A cada toque</string>
     <string name="increasing_ring_interval_half_second">Meio segundo</string>
     <string name="increasing_ring_interval_1second">1 segundo</string>
     <string name="increasing_ring_interval_2seconds">2 segundos</string>
@@ -88,33 +88,33 @@
     <string name="volume_wake_summary">Ao pressionar um dos botões de volume, seu dispositivo irá acordar</string>
 
     <!--Lockscreen see through-->
-    <string name="see_through_title">Enxergar através</string>
+    <string name="see_through_title">Transparência</string>
     <string name="see_through_summary">Mostra o conteúdo por trás de sua tela de bloqueio. Seus dados podem ser visíveis para aqueles aos seu redor</string>
 
     <!--AppOps-->
-    <string name="appops_settings_title">Privacidade dos Apps</string>
+    <string name="appops_settings_title">Monitoramento</string>
 
     <!--User preferences settings-->
     <string name="personalization">Personalização</string>
-    <string name="reset_user_preferences_title">Reiniciar preferências</string>
-    <string name="reset_user_preferences_summary">Restaura as preferências de interface de usuário para os valores padrão</string>
-    <string name="reset_user_preferences_dialog">Têm certeza que deseja restaurar suas preferências?</string>
+    <string name="reset_user_preferences_title">Reiniciar configurações</string>
+    <string name="reset_user_preferences_summary">Restaura as preferências de interface de usuário para o padrão</string>
+    <string name="reset_user_preferences_dialog">Tens certeza que deseja restaurar suas configurações?</string>
 
     <!--Battery icon selection-->
     <string name="battery_status_icon_title">Ícone da barra de status</string>
     <string name="battery_bar">Barra</string>
-    <string name="battery_bar_percent">Barra &amp; percentual</string>
-    <string name="battery_circle">Círculo</string>
-    <string name="battery_circle_percent">Círculo &amp; percentual</string>
+    <string name="battery_bar_percent">Barra com percentual</string>
+    <string name="battery_circle">Circular</string>
+    <string name="battery_circle_percent">Circular com percentual</string>
 
     <!-- Message of dialog confirming that user wants to restart their device with a new runtime -->
     <string name="custom_runtime_warning_title">Aviso</string>
-    <string name="custom_runtime_warning_message">ART é suportada pela equipe ParanoidAndroid. Esta configuração está incluída somente para experimentação e tem o potencial de causar instabilidade, quedas, perda de dados ou prevenir o funcionamento correto de inicialização de seu dispositivo. Visite &lt; href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; para mais informações.&lt;br/&gt;&lt;br/&gt; Nós pedimos que você não envie relatórios de erros se você tiver com o ART habilitado.&lt;br/&gt;&lt;br/&gt;Têm certeza que deseja reniciar o sistema para alterar o tempo de execução para <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
+    <string name="custom_runtime_warning_message">ART não é suportado pela equipe ParanoidAndroid. Esta configuração está incluída somente para testes e tem o potencial de causar instabilidade, travamentos, perda de dados ou prevenir o funcionamento correto de inicialização de seu dispositivo. Visite &lt; href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introduzindo ART&lt;/a&gt; para mais informações.&lt;br/&gt;&lt;br/&gt; Sugerimos não nos enviar relatórios de erros caso habilite o ART.&lt;br/&gt;&lt;br/&gt;Tens certeza que deseja reniciar o sistema para alterar o tempo de execução para <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
 
     <!-- Lockscreen widgets -->
     <string name="security_maximize_widgets_title">Maximizar widgets</string>
 
     <!--PA version-->
-    <string name="pa_version">Versão ParanoidAndroid</string>
-    <string name="pa_version_default">Desconhecida</string>
+    <string name="pa_version">Versão da ParanoidAndroid</string>
+    <string name="pa_version_default">4+</string>
 </resources>
