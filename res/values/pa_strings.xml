@@ -210,4 +210,7 @@
     <!--PA version-->
     <string name="pa_version">ParanoidAndroid version</string>
     <string name="pa_version_default">Unknown</string>
+
+    <!-- Force show navigation bar -->
+    <string name="confirm_force_navbar_dialog_message">Unable to disable hardware keys, continue?</string>
 </resources>
