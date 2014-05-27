@@ -513,6 +513,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             // Hardware abstraction framework not installed
             return false;
         }
+    }
 
     public class PackageStatusReceiver extends BroadcastReceiver {
         @Override
