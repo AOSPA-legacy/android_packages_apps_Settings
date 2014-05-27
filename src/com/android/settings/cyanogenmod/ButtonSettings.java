@@ -45,10 +45,12 @@ import org.cyanogenmod.hardware.KeyDisabler;
 
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+    private static final String KEY_HOME_PRESS = "hardware_keys_home_press";
     private static final String KEY_HOME_LONG_PRESS = "hardware_keys_home_long_press";
     private static final String KEY_HOME_DOUBLE_TAP = "hardware_keys_home_double_tap";
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
+    private static final String KEY_BACK_PRESS = "hardware_keys_back_press";
     private static final String KEY_ASSIST_PRESS = "hardware_keys_assist_press";
     private static final String KEY_ASSIST_LONG_PRESS = "hardware_keys_assist_long_press";
     private static final String KEY_APP_SWITCH_PRESS = "hardware_keys_app_switch_press";
@@ -64,6 +66,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
     private static final String CATEGORY_MENU = "menu_key";
+    private static final String CATEGORY_BACK = "back_key";
     private static final String CATEGORY_ASSIST = "assist_key";
     private static final String CATEGORY_APPSWITCH = "app_switch_key";
     private static final String CATEGORY_CAMERA = "camera_key";
@@ -80,6 +83,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final int ACTION_VOICE_SEARCH = 4;
     private static final int ACTION_IN_APP_SEARCH = 5;
     private static final int ACTION_LAUNCH_CAMERA = 6;
+    private static final int KEY_ACTION_HOME = 7;
+    private static final int KEY_ACTION_BACK = 8;
 
     // Masks for checking presence of hardware keys.
     // Must match values in frameworks/base/core/res/res/values/config.xml
@@ -90,10 +95,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     public static final int KEY_MASK_APP_SWITCH = 0x10;
     public static final int KEY_MASK_CAMERA = 0x20;
 
+    private ListPreference mHomePressAction;
     private ListPreference mHomeLongPressAction;
     private ListPreference mHomeDoubleTapAction;
     private ListPreference mMenuPressAction;
     private ListPreference mMenuLongPressAction;
+    private ListPreference mBackPressAction;
     private ListPreference mAssistPressAction;
     private ListPreference mAssistLongPressAction;
     private ListPreference mAppSwitchPressAction;
@@ -125,6 +132,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final boolean hasPowerKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER);
         final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
         final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
+        final boolean hasBackKey = (deviceKeys & KEY_MASK_BACK) != 0;
         final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
         final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
         final boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
@@ -136,6 +144,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_HOME);
         final PreferenceCategory menuCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_MENU);
+        final PreferenceCategory backCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_BACK);
         final PreferenceCategory assistCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_ASSIST);
         final PreferenceCategory appSwitchCategory =
@@ -186,6 +196,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
 
         if (hasHomeKey) {
+            int pressAction = Settings.System.getInt(resolver,
+                    Settings.System.KEY_HOME_ACTION, ACTION_HOME);
+            mHomePressAction = initActionList(KEY_HOME_PRESS, pressAction);
+
             if (!res.getBoolean(R.bool.config_show_homeWake)) {
                 homeCategory.removePreference(findPreference(Settings.System.HOME_WAKE_SCREEN));
             }
@@ -238,6 +252,17 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else {
             prefScreen.removePreference(menuCategory);
         }
+
+        if (hasBackKey) {
+            int pressAction = Settings.System.getInt(resolver,
+                    Settings.System.KEY_BACK_ACTION, ACTION_BACK);
+            mBackPressAction = initActionList(KEY_BACK_PRESS, pressAction);
+
+            hasAnyBindableKey = true;
+        } else {
+            prefScreen.removePreference(menuCategory);
+        }
+
 
         if (hasAssistKey) {
             int pressAction = Settings.System.getInt(resolver,
@@ -361,6 +386,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             handleActionListChange(mHomeLongPressAction, newValue,
                     Settings.System.KEY_HOME_LONG_PRESS_ACTION);
             return true;
+        } else if (preference == mHomePressAction) {
+            handleActionListChange(mHomePressAction, newValue,
+                    Settings.System.KEY_HOME_ACTION);
+            return true;
         } else if (preference == mHomeDoubleTapAction) {
             handleActionListChange(mHomeDoubleTapAction, newValue,
                     Settings.System.KEY_HOME_DOUBLE_TAP_ACTION);
@@ -372,6 +401,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mMenuLongPressAction) {
             handleActionListChange(mMenuLongPressAction, newValue,
                     Settings.System.KEY_MENU_LONG_PRESS_ACTION);
+            return true;
+        } else if (preference == mBackPressAction) {
+            handleActionListChange(mBackPressAction, newValue,
+                    Settings.System.KEY_BACK_ACTION);
             return true;
         } else if (preference == mAssistPressAction) {
             handleActionListChange(mAssistPressAction, newValue,
@@ -442,6 +475,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_HOME);
         final PreferenceCategory menuCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_MENU);
+        final PreferenceCategory backCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_BACK);
         final PreferenceCategory assistCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_ASSIST);
         final PreferenceCategory appSwitchCategory =
@@ -461,6 +496,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
         if (menuCategory != null) {
             menuCategory.setEnabled(!enabled);
+        }
+        if (backCategory != null) {
+            backCategory.setEnabled(!enabled);
         }
         if (assistCategory != null) {
             assistCategory.setEnabled(!enabled);
