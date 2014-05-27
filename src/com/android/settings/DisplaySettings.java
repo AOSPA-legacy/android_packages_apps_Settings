@@ -112,16 +112,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         return isPackageInstalled(PEEK_APPLICATION);
     }
 
-    private boolean isPackageInstalled(String packagename) {
-        PackageManager pm = getActivity().getPackageManager();
-        try {
-            pm.getPackageInfo(packagename, PackageManager.GET_ACTIVITIES);
-            return true;
-        } catch (NameNotFoundException e) {
-            return false;
-        }
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
