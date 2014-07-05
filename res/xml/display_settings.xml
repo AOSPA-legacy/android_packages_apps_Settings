@@ -118,4 +118,9 @@
                 android:key="battery_light"
                 android:title="@string/battery_light_title"
                 android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />
+
+        <PreferenceScreen
+                android:key="heads_up"
+                android:title="@string/category_heads_up"
+                android:fragment="com.android.settings.headsup.HeadsUpDoNotDisturbSettings" />
 </PreferenceScreen>

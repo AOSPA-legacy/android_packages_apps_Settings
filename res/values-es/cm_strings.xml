@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2014 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="wifi_setting_countrycode_title">Código de región Wi-Fi</string>
+    <string name="wifi_setting_countrycode_summary">Especificar el código de región para Wi-Fi</string>
+    <string name="wifi_setting_countrycode_error">Ocurrió un error al establecer el código de región</string>
+    <string name="wifi_setting_priority_title">Prioridad Wi-Fi</string>
+    <string name="wifi_setting_priority_summary">Especificar la prioridad de las redes Wi-Fi</string>
+    <string name="wifi_ssid_input_limit">EL SSID excede la longitud máxima</string>
+    <string name="p2p_device_name_input_limit">El nombre del P2P excede la longitud máxima</string>
+
+    <string name="wake_when_plugged_or_unplugged_title">Encender con cargador</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Encender la pantalla al conectar o desconectar el cargador</string>
+
+    <string name="category_heads_up">Heads up</string>
+    <string name="title_heads_up_enabled">Habilitar heads up</string>
+    <string name="add_heads_up_dnd_package">Agregar aplicación a la lista \'No molestar\'</string>
+    <string name="heads_up_dnd_title">No molestar</string>
+
+    <string name="auto_brightness_setup_title">Brillo automático</string>
+    <string name="auto_brightness_adjustment_title">Ajustar brillo</string>
+    <string name="auto_brightness_twilight_adjustment">Ajustar a la salida y puesta del sol</string>
+    <string name="light_sensor_current_value">Valor actual del sensor: <xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">Niveles automáticos de brillo</string>
+    <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+    <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
+    <string name="auto_brightness_adjust_button">Ajustar</string>
+    <string name="auto_brightness_close_button">Cerrar</string>
+    <string name="auto_brightness_reset_button">Restablecer</string>
+    <string name="auto_brightness_split_dialog_title">Dividir nivel</string>
+    <string name="auto_brightness_level_dialog_title">Ajustar niveles de luz</string>
+    <string name="auto_brightness_lux">Luminosidad ambiental (lux)</string>
+    <string name="auto_brightness_backlight">Brillo de pantalla (%)</string>
+    <string name="auto_brightness_reset_dialog_title">¿Restablecer los niveles?</string>
+    <string name="auto_brightness_reset_confirmation">Todos los niveles de brillo serán restablecidos a los valores por defecto.</string>
+    <string name="auto_brightness_split_lux_format">Valor para división (entre <xliff:g id="min">%1$d</xliff:g> y <xliff:g id="max">%2$d</xliff:g> lux)</string>
+    <string name="auto_brightness_level_options">Opciones de nivel de luz</string>
+    <string name="auto_brightness_menu_edit">Editar</string>
+    <string name="auto_brightness_menu_split">Dividir</string>
+    <string name="auto_brightness_menu_remove">Eliminar</string>
+    <string name="auto_brightness_preview">Previsualizar</string>
+    <string name="auto_brightness_preview_dialog_title">Curva de brillo</string>
+    <string name="auto_brightness_help_dialog_title">Ayuda</string>
+    <string name="auto_brightness_help_text"><b>¿Cómo se calcula el nivel de brillo?</b>
+\n\n
+La curva de brillo es calculada mediante el uso de una <i>interpolación segmentaria cúbica</i> bajo un número dado de <i>puntos de control</i>. No se trata de un cálculo lineal, donde el brillo de pantalla permanece constante para un rango de luminosidad ambiental determinado. Con este sistema, pequeños cambios en la luminosidad ambiental no producirán un gran salto en el
+brillo de la pantalla, pero será complicado poder predecir las consecuencias de cambiar algún punto de control.\n
+Para ayudar en esto, se podrá mostrar una previsualización de la curva resultante. Ten en cuenta que la previsualización mostrará la curva en escala <i>logarítmica</i> por lo que no todos los puntos pueden mostrarse iguales. Si utilizásemos una escala lineal, sería difícil distinguir las tendencias de los puntos de control situados en el rango de mínima luminosidad ambiental.
+\n\n
+<b>¿Cómo editar la curva de brillo?</b>
+\n\n
+Cada línea en lista de valores se corresponde con un <i>punto de control</i> de la curva de brillo. Para editar el nivel de brillo de ese punto, puedes usar el control deslizante presente en cada línea. El brillo de la pantalla cambiará en función del control deslizante para mostrar una vista previa del nivel de luminosidad.\n
+Tocando de forma prolongada cada línea se mostrarán opciones adicionales. Seleccionando \u00ABEditar\u00BB, podrás editar el nivel de luminosidad ambiental del punto de control así como introducir manualmente el brillo de pantalla deseado. Seleccionando \u00ABDividir\u00BB, podrás crear una nueva línea con el fin de insertar puntos de control adicionales. \u00ABEliminar\u00BB borrará la línea seleccionada.</string>
+    <string name="auto_brightness_sensitivity_title">Sensibilidad</string>
+    <string name="auto_brightness_sensitivity_verylow">Muy baja</string>
+    <string name="auto_brightness_sensitivity_low">Baja</string>
+    <string name="auto_brightness_sensitivity_medium">Media</string>
+    <string name="auto_brightness_sensitivity_high">Alta</string>
+    <string name="auto_brightness_sensitivity_veryhigh">Muy alta</string>
+
+    <string name="vibrator_intensity_title">Intensidad de vibración</string>
+    <string name="vibrator_warning">No son recomendables valores superiores a %1$d</string>
+
+    <string name="color_calibration_title">Calibración de color</string>
+    <string name="color_calibration_summary">Calibrar los colores de la pantalla</string>
+    <string name="color_red_title">Rojo</string>
+    <string name="color_green_title">Verde</string>
+    <string name="color_blue_title">Azul</string>
+
+    <string name="gamma_tuning_title_head">Corrección gamma</string>
+    <string name="gamma_tuning_summary_head">Ajustar la corrección gamma de la pantalla</string>
+    <string name="gamma_tuning_control_set_header">Grupo <xliff:g id="index">%d</xliff:g></string>
+    <string name="gamma_tuning_contrast">Contraste</string>
+    <string name="gamma_tuning_brightness">Brillo</string>
+    <string name="gamma_tuning_saturation">Saturación</string>
+
+    <string name="headset_category_title">Auriculares</string>
+
+    <string name="headset_connect_player_title">Iniciar reproductor</string>
+    <string name="headset_connect_player_summary">Iniciar el reproductor de música por defecto al conectar los auriculares</string>
+
+    <string name="more_device_controls_title">Más\u2026</string>
+    <string name="more_device_settings_title">Otros ajustes del dispositivo</string>
+    <string name="sensors_motors_title">Sensores y vibración</string>
+    <string name="display_calibration_title">Calibración de pantalla</string>
+
+    <string name="kill_app_longpress_back">Botón Volver</string>
+    <string name="kill_app_longpress_back_summary">Cerrar aplicaciones mediante la pulsación prolongada del botón Volver</string>
+
+    <string name="adaptive_backlight_title">Brillo adaptativo</string>
+    <string name="adaptive_backlight_summary">Variar inteligentemente el brillo de la pantalla ayudando así a la duración de la batería</string>
+
+    <string name="performance_settings_title">Rendimiento</string>
+
+    <string name="performance_settings_warning_title">Procede con precaución</string>
+    <string name="performance_settings_warning">Estos ajustes han sido incluidos a modo de experimentación y cualquier cambio realizado sobre ellos puede causar inestabilidad, cierre de aplicaciones, pérdida de datos o fallos de hardware.\n\nNo comuniques informes de errores si has cambiado alguno de los valores definidos por defecto.</string>
+
+    <string name="processor_title">Procesador</string>
+    <string name="processor_summary">Cambiar governador de la CPU y velocidad de reloj</string>
+
+    <string name="cpu_cur_freq_title">Frecuencia actual de la CPU</string>
+    <string name="cpu_governors_title">Patrones CPU</string>
+    <string name="cpu_governors_summary">%S</string>
+    <string name="cpu_min_freq_title">Frecuencia mínima de la CPU</string>
+    <string name="cpu_min_freq_summary">%s</string>
+    <string name="cpu_max_freq_title">Frecuencia máxima de la CPU</string>
+    <string name="cpu_max_freq_summary">%s</string>
+    <string name="cpu_set_on_boot">Establecer al iniciar</string>
+    <string name="cpu_set_on_boot_summary">Restaurar la configuración al iniciar el sistema</string>
+
+    <string name="io_scheds_title">Planificador de E/S</string>
+    <string name="io_scheds_summary">Cambiar planificador de E/S</string>
+
+    <string name="io_sched_title">Planificador E/S</string>
+    <string name="io_sched_summary">%S</string>
+    <string name="io_sched_set_on_boot">Establecer al iniciar</string>
+    <string name="io_sched_set_on_boot_summary">Restaurar la configuración al iniciar el sistema</string>
+
+    <string name="perf_profile_title">Perfil</string>
+
+    <string name="perf_profile_pwrsv">Ahorro de energía</string>
+    <string name="perf_profile_bal">Balanceado</string>
+    <string name="perf_profile_perf">Rendimiento</string>
+
+    <string name="memory_management_title">Gestión de la memoria</string>
+    <string name="memory_management_summary">Personalizar el uso de memoria para alterar el rendimiento del sistema</string>
+
+    <string name="pref_ksm_title">Memoria compartida de Kernel (KMS)</string>
+    <string name="pref_ksm_summary">KSM reduce los requerimientos de memoria física y mejora el rendimiento</string>
+
+    <string name="pref_purgeable_assets_title">Permitir purgar recursos</string>
+    <string name="pref_purgeable_assets_summary">Purgar recursos de imágenes en memoria permite liberar más memoria cuando se necesite (requiere reiniciar)</string>
+
+    <string name="pref_use_16bpp_alpha_title">Transparencia 16bit</string>
+    <string name="pref_use_16bpp_alpha_summary">Ofrece mejor rendimiento gráfico a costa de una menor calidad gráfica. Adicionalmente, puede causar defectos visuales (requiere reiniciar)</string>
+
+    <string name="pref_force_highend_gfx_title">Forzar mejoras visuales</string>
+    <string name="pref_force_highend_gfx_summary">Habilitar efectos visuales de alta calidad, como transparencias en la barra de estado y de navegación (requiere reiniciar)</string>
+
+    <string name="gestures_settings_title">Stylus</string>
+    <string name="category_spen_title">Gestos con Stylus</string>
+    <string name="enable_subcat_title">Stylus</string>
+    <string name="enable_spen_title_head">Habilitar gestos Stylus</string>
+    <string name="enable_spen_summary_head">Ejecutar acciones personalizadas, asociadas a gestos, con el botón del Stylus pulsado</string>
+    <string name="gestures_subcat_title">Gestos</string>
+    <string name="gestures_left_spen_title_head">Deslizar a la izquierda</string>
+    <string name="gestures_left_spen_summary_head">Ejecutar una acción personalizada al deslizar a la izquierda</string>
+    <string name="gestures_right_spen_title_head">Deslizar a la derecha</string>
+    <string name="gestures_right_spen_summary_head">Ejecutar una acción personalizada al deslizar a la derecha</string>
+    <string name="gestures_up_spen_title_head">Deslizar hacia arriba</string>
+    <string name="gestures_up_spen_summary_head">Ejecutar una acción personalizada al deslizar hacia arriba</string>
+    <string name="gestures_down_spen_title_head">Deslizar hacia abajo</string>
+    <string name="gestures_down_spen_summary_head">Ejecutar una acción personalizada al deslizar hacia abajo</string>
+    <string name="gestures_long_spen_title_head">Pulsación larga</string>
+    <string name="gestures_long_spen_summary_head">Ejecutar una acción personalizada al realizar una pulsación prolongada</string>
+    <string name="gestures_double_spen_title_head">Doble toque</string>
+    <string name="gestures_double_spen_summary_head">Ejecutar una acción personalizada al realizar un toque doble</string>
+
+    <string name="gestures_action_empty">Sin acción</string>
+    <string name="gestures_action_home">Emular botón Inicio</string>
+    <string name="gestures_action_back">Emular botón Atrás</string>
+    <string name="gestures_action_menu">Emular botón Menú</string>
+    <string name="gestures_action_search">Iniciar búsqueda</string>
+    <string name="gestures_action_recent">Aplicaciones recientes</string>
+
+    <string name="stylus_app_not_installed">%s no está instalada</string>
+
+    <string name="button_settings">Botones</string>
+    <string name="hardware_keys_power_key_title">Botón de encendido</string>
+    <string name="hardware_keys_home_key_title">Botón Inicio</string>
+    <string name="hardware_keys_menu_key_title">Botón Menú</string>
+    <string name="hardware_keys_assist_key_title">Botón Búsqueda</string>
+    <string name="hardware_keys_appswitch_key_title">Botón Recientes</string>
+    <string name="hardware_keys_camera_key_title">Botón Cámara</string>
+    <string name="hardware_keys_volume_keys_title">Botones de volumen</string>
+    <string name="hardware_keys_short_press_title">Acción pulsación corta</string>
+    <string name="hardware_keys_long_press_title">Acción pulsación larga</string>
+    <string name="hardware_keys_double_tap_title">Acción doble toque</string>
+    <string name="hardware_keys_action_nothing">Sin acción</string>
+    <string name="hardware_keys_action_menu">Abrir/Cerrar menú</string>
+    <string name="hardware_keys_action_app_switch">Cambio entre aplicaciones recientes</string>
+    <string name="hardware_keys_action_search">Asistente de búsqueda</string>
+    <string name="hardware_keys_action_voice_search">Búsqueda por voz</string>
+    <string name="hardware_keys_action_in_app_search">Búsqueda dentro de la aplicación</string>
+    <string name="hardware_keys_action_launch_camera">Iniciar Cámara</string>
+    <string name="power_end_call_title">Finalizar llamada</string>
+    <string name="power_end_call_summary">Pulsando el botón de encendido finalizará la llamada en curso</string>
+    <string name="button_wake_title">Despertar</string>
+    <string name="home_wake_summary">Presionando el botón Inicio, el dispositivo saldrá del modo en espera</string>
+    <string name="home_answer_call_title">Responder llamada</string>
+    <string name="home_answer_call_summary">Pulsando el botón de encendido se contestará la llamada entrante</string>
+    <string name="camera_wake_summary">Presionando el botón Cámara, el dispositivo saldrá del modo en espera</string>
+    <string name="camera_sleep_on_release_title">Vista rápida</string>
+    <string name="camera_sleep_on_release_summary">Una leve pulsación del botón Cámara, dejará la pantalla encendida hasta que éste sea liberado</string>
+    <string name="camera_music_controls_title">Control multimedia</string>
+    <string name="camera_music_controls_summary">Cuando la pantalla esté apagada, una pulsación prolongada del botón Cámara, parará o reanudará la pista de música activa</string>
+    <string name="volume_wake_summary">Presionando los botones de control de volumen, el dispositivo saldrá del modo en espera</string>
+    <string name="volbtn_music_controls_title">Control multimedia</string>
+    <string name="volbtn_music_controls_summary">Cuando la pantalla esté apagada, una pulsación prolongada de los controles de volumen, avanzará o retrocederá sobre las pistas de música activas</string>
+    <string name="volbtn_cursor_control_title">Control del cursor</string>
+    <string name="volbtn_cursor_control_off">Deshabilitado</string>
+    <string name="volbtn_cursor_control_on">Los botones subir y bajar volumen moverán el cursor a izquierda y derecha respectivamente</string>
+    <string name="volbtn_cursor_control_on_reverse">Los botones subir y bajar volumen moverán el cursor a derecha e izquierda respectivamente</string>
+    <string name="swap_volume_buttons_title">Reorientar botones</string>
+    <string name="swap_volume_buttons_summary">Intercambiar los botones de control de volumen al rotar la pantalla</string>
+
+    <string name="button_backlight_title">Retroiluminación</string>
+    <string name="button_backlight_enabled">Iluminar botones</string>
+    <string name="keyboard_backlight_enabled">Iluminar teclado</string>
+    <string name="button_backlight_seekbar_title">Brillo de los botones</string>
+    <string name="keyboard_backlight_seekbar_title">Brillo del teclado</string>
+    <string name="backlight_timeout_title">Tiempo de iluminación</string>
+    <string name="backlight_timeout_unlimited">No apagar</string>
+    <plurals name="backlight_timeout_time">
+        <item quantity="one"><xliff:g id="seconds">%d</xliff:g> segundos</item>
+        <item quantity="other"><xliff:g id="seconds">%d</xliff:g> segundos</item>
+    </plurals>
+    <string name="backlight_summary_disabled">Deshabilitado</string>
+    <string name="backlight_summary_enabled_with_timeout">Habilitado durante <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Habilitado</string>
+
+    <string name="confirm_delete_apn">El APN será eliminado.</string>
+
+    <string name="advanced_settings_title">Opciones avanzadas</string>
+
+    <string name="usb_mass_storage_title">Almacenamiento masivo</string>
+    <string name="usb_mass_storage_summary">Permite transferir archivos entre la tarjeta SD y el ordenador</string>
+
+    <string name="gps_download_data_wifi_only">Descargar datos del GPS asistido solo en redes Wi-Fi</string>
+
+    <string name="stylus_icon_enabled_title">Stylus</string>
+    <string name="stylus_icon_enabled_summary">Mostrar el cursor cuando se arrastra o dibuja con Stylus</string>
+
+    <string name="adb_notify">Notificar depuración USB</string>
+    <string name="adb_notify_summary">Mostrar una notificación cuando el modo de depuración USB esté conectado</string>
+
+    <string name="double_tap_to_wake_title">Doble toque para despertar</string>
+    <string name="double_tap_to_wake_summary">Habilitar o deshabilitar doble toque para despertar el dispositivo</string>
+
+    <string name="data_usage_cycle_editor_subtitle_cm">Fecha de cada ciclo:</string>
+    <string name="data_usage_lengths_spinner_subtitle">Duración del ciclo:</string>
+
+    <string name="edge_gesture_service_title">Bloquear eventos táctiles</string>
+    <string name="edge_gesture_service_summary">No enviar a las aplicaciones eventos táctiles de la barra de estado y de navegación</string>
+
+    <string name="disable_navkeys_title">Habilitar barra de navegación</string>
+    <string name="disable_navkeys_summary">Habilitar la barra de navegación en pantalla y deshabilitar los botones físicos</string>
+
+    <string name="phone_service_state">Voz: <xliff:g id="voice_state">%1$s</xliff:g>, datos: <xliff:g id="data_state">%2$s</xliff:g></string>
+
+    <string name="voice_plus_summary">Permitir a todas las aplicaciones enviar mensajes SMS a través de Google Voice</string>
+
+    <string name="accessibility_sync_in_progress">Sincronización en progreso.</string>
+
+    <string name="wifi_mode">Modo</string>
+    <string name="wifi_mode_ibss">Red Ad-Hoc (IBSS)</string>
+    <string name="wifi_mode_ibss_short">Ad-Hoc</string>
+    <string name="wifi_ibss_freq_title">Canal / Frecuencia</string>
+    <string name="wifi_channel">Canal</string>
+    <string name="wifi_mhz">MHz</string>
+
+    <string name="sub_no_sim">Sin tarjeta SIM</string>
+
+    <string name="multi_sim_settings_title">Multi SIM</string>
+
+    <string name="multi_sim_settings_group_summary">Selección de SIM por defecto</string>
+
+    <string name="voice_title">Llamadas de voz</string>
+
+    <string name="data_title">Llamadas de datos</string>
+
+    <string name="sms_title">Envío de SMS</string>
+
+    <string name="priority_sub_title">Prioridad de suscripción</string>
+
+    <string name="bluetooth_accept_all_files">Aceptar todos los tipos de archivo</string>
+</resources>
+
