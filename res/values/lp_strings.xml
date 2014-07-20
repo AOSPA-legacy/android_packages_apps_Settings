@@ -14,9 +14,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- AOSPA Legacy Parts -->
-    <string name="palp_settings_title">Legacy parts</string>
-    <string name="palp_settings_general_title">General</string>
+    <string name="lp_settings_title">Legacy parts</string>
+    <string name="lp_settings_general_title">General</string>
 
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+    <string name="navigation_drawer_toggle">Toggle Drawer</string>
 </resources>

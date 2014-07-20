@@ -31,5 +31,4 @@
     <color name="data_usage_sweep_warning_label_color">#f7931d</color>
     <color name="data_usage_sweep_limit_label_color">#c01a2c</color>
 
-    <color name="background_tab_pressed">#6633B5E5</color>
 </resources>
