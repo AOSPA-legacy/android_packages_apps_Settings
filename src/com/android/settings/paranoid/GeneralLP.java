@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.PALP;
+package com.android.settings.paranoid;
 
 import android.os.Bundle;
 import android.preference.Preference;
@@ -27,18 +27,11 @@ import com.android.settings.Utils;
 
 public class GeneralLP extends SettingsPreferenceFragment {
 
-
-   private static final String KEY_XPERIA_SETTINGS = "xperia_settings";
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.general_lp_settings);
 
-
-        //XperiaSettings
-        Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
-                getPreferenceScreen(), KEY_XPERIA_SETTINGS);
     }
 }

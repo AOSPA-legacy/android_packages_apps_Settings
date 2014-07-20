@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.PALP;
+package com.android.settings.paranoid;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -64,7 +64,7 @@ public class DisplaySettingsLP extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.display_settings_palp);
+        addPreferencesFromResource(R.xml.display_settings_lp);
 
         mScreenColorSettings = (PreferenceScreen) findPreference(KEY_SCREEN_COLOR_SETTINGS);
         if (!isPostProcessingSupported()) {
