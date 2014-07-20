@@ -86,7 +86,7 @@ import com.android.settings.location.LocationSettings;
 import com.android.settings.net.MobileDataEnabler;
 import com.android.settings.nfc.AndroidBeam;
 import com.android.settings.nfc.PaymentSettings;
-import com.android.settings.PALP.LegacyParts;
+import com.android.settings.paranoid.LegacyParts;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
