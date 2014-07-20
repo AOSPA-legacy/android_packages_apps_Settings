@@ -128,9 +128,9 @@
     <!-- Legacy Parts -->
     <header
         android:id="@+id/legacy_parts"
-        android:title="@string/palp_settings_title"
+        android:title="@string/lp_settings_title"
         android:icon="@drawable/ic_settings_palp"
-        android:fragment="com.android.settings.PALP.LegacyParts" />
+        android:fragment="com.android.settings.paranoid.LegacyParts" />
 
     <!-- Manage users -->
     <header

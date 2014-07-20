@@ -32,7 +32,7 @@ import com.android.settings.hardware.DisplayColor;
 import com.android.settings.hardware.DisplayGamma;
 import com.android.settings.hardware.VibratorIntensity;
 import com.android.settings.location.LocationSettings;
-import com.android.settings.PALP.DisplaySettingsLP;
+import com.android.settings.paranoid.DisplaySettingsLP;
 
 import java.util.Arrays;
 import java.util.List;
