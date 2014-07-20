@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.PALP;
+package com.android.settings.paranoid;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -64,7 +64,7 @@ public class DisplaySettingsLP extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.display_settings_palp);
+        addPreferencesFromResource(R.xml.display_settings_lp);
 
         mScreenColorSettings = (PreferenceScreen) findPreference(KEY_SCREEN_COLOR_SETTINGS);
         if (!isPostProcessingSupported()) {
@@ -89,7 +89,7 @@ public class DisplaySettingsLP extends SettingsPreferenceFragment implements
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_ADVANCED_DISPLAY_SETTINGS);
 
-        //Gesture Settings 
+        //Gesture Settings
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_GESTURE_SETTINGS);
 
@@ -187,15 +187,15 @@ public class DisplaySettingsLP extends SettingsPreferenceFragment implements
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
-    
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         return true;
-    }    
+    }
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
         return false;
-    }    
+    }
 
 }
