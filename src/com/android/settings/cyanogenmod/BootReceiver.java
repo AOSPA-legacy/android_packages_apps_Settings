@@ -32,7 +32,7 @@ import com.android.settings.hardware.DisplayColor;
 import com.android.settings.hardware.DisplayGamma;
 import com.android.settings.hardware.VibratorIntensity;
 import com.android.settings.location.LocationSettings;
-import com.android.settings.PALP.DisplaySettingsLP;
+import com.android.settings.paranoid.DisplaySettingsAdvanced;
 
 import java.util.Arrays;
 import java.util.List;
@@ -86,7 +86,7 @@ public class BootReceiver extends BroadcastReceiver {
         DisplayColor.restore(ctx);
         DisplayGamma.restore(ctx);
         VibratorIntensity.restore(ctx);
-        DisplaySettingsLP.restore(ctx);
+        DisplaySettingsAdvanced.restore(ctx);
         LocationSettings.restore(ctx);
         ButtonSettings.restoreKeyDisabler(ctx);
     }
