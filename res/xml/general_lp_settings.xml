@@ -15,7 +15,7 @@
 -->
 <PreferenceScreen 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/palp_settings_general_title"
+    android:title="@string/lp_settings_general_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:key="generalLP_settings">
 
