@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2014 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.android.settings.paranoid;
 
 import android.content.Context;
@@ -26,9 +42,9 @@ import java.util.ArrayList;
 import org.cyanogenmod.hardware.AdaptiveBacklight;
 import org.cyanogenmod.hardware.TapToWake;
 
-public class DisplaySettingsAdvanced extends SettingsPreferenceFragment implements
+public class DisplaySettingsLP extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, OnPreferenceClickListener {
-    private static final String TAG = "DisplaySettingsAdvanced";
+    private static final String TAG = "LegacyParts";
 
     private static final String KEY_ADVANCED_DISPLAY_SETTINGS = "advanced_display_settings";
     private static final String KEY_SCREEN_COLOR_SETTINGS = "screencolor_settings";
@@ -48,7 +64,7 @@ public class DisplaySettingsAdvanced extends SettingsPreferenceFragment implemen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.display_settings_advanced);
+        addPreferencesFromResource(R.xml.display_settings_lp);
 
         mScreenColorSettings = (PreferenceScreen) findPreference(KEY_SCREEN_COLOR_SETTINGS);
         if (!isPostProcessingSupported()) {

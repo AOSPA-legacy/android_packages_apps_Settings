@@ -1881,6 +1881,8 @@
 
         <!-- AOSPA activities Start -->
 
+        <activity android:name=".cyanogenmod.PerformanceSettings" />
+
         <activity android:name=".ApnEditor" />
 
         <activity android:name=".applications.ProtectedAppsActivity"

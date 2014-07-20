@@ -50,11 +50,6 @@
                 android:title="@string/wifi_display_settings_title"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
-        <PreferenceScreen
-                android:key="display_settings_advanced"
-                android:title="@string/display_settings_advanced"
-                android:fragment="com.android.settings.paranoid.DisplaySettingsAdvanced" />
-
         <!-- Notifications -->
         <PreferenceCategory
             android:key="notification_category"
