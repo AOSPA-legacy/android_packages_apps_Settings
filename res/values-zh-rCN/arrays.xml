@@ -235,6 +235,7 @@
     <item msgid="4588829735729884491">"短信"</item>
     <item msgid="886742181977884584">"媒体"</item>
     <item msgid="7924928667052300589">"设备"</item>
+    <item>"启动"</item>
   </string-array>
   <string-array name="app_ops_summaries">
     <item msgid="4979188868761515915">"粗略位置"</item>
@@ -280,6 +281,13 @@
     <item msgid="2029227495214047094">"保持唤醒状态"</item>
     <item msgid="26109888160231211">"监测位置"</item>
     <item msgid="5753382310468855812">"监控高电耗位置信息服务"</item>
+    <item>打开WiFi</item>
+    <item>打开蓝牙</item>
+    <item>打开移动数据</item>
+    <item>发送彩信</item>
+    <item>读取彩信</item>
+    <item>修改彩信</item>
+    <item>自启动</item>
   </string-array>
   <string-array name="app_ops_labels">
     <item msgid="6602854600289714121">"位置"</item>
@@ -325,6 +333,13 @@
     <item msgid="4665183401128289653">"保持唤醒状态"</item>
     <item msgid="8584357129746649222">"位置"</item>
     <item msgid="7669257279311110599">"位置信息"</item>
+    <item>打开WiFi</item>
+    <item>打开蓝牙</item>
+    <item>打开移动数据</item>
+    <item>发送彩信</item>
+    <item>读取彩信</item>
+    <item>修改彩信</item>
+    <item>自启动</item>
   </string-array>
   <string-array name="long_press_timeout_selector_titles">
     <item msgid="3511504869290423954">"短"</item>
@@ -385,9 +400,7 @@
   </string-array>
   <string-array name="window_animation_scale_entries">
     <item msgid="8134156599370824081">"关闭动画"</item>
-    <item>"动画缩放 0.25x"</item>
     <item msgid="6624864048416710414">"动画缩放 0.5x"</item>
-    <item>"动画缩放 0.75x"</item>
     <item msgid="2219332261255416635">"动画缩放 1x"</item>
     <item msgid="3544428804137048509">"动画缩放 1.5x"</item>
     <item msgid="3110710404225974514">"动画缩放 2x"</item>
@@ -396,9 +409,7 @@
   </string-array>
   <string-array name="transition_animation_scale_entries">
     <item msgid="8464255836173039442">"关闭动画"</item>
-    <item>"动画缩放 0.25x"</item>
     <item msgid="3375781541913316411">"动画缩放 0.5x"</item>
-    <item>"动画缩放 0.75x"</item>
     <item msgid="1991041427801869945">"动画缩放 1x"</item>
     <item msgid="4012689927622382874">"动画缩放 1.5x"</item>
     <item msgid="3289156759925947169">"动画缩放 2x"</item>
@@ -407,9 +418,7 @@
   </string-array>
   <string-array name="animator_duration_scale_entries">
     <item msgid="6039901060648228241">"关闭动画"</item>
-    <item>"动画缩放 0.25x"</item>
     <item msgid="1138649021950863198">"动画缩放 0.5x"</item>
-    <item>"动画缩放 0.75x"</item>
     <item msgid="4394388961370833040">"动画缩放 1x"</item>
     <item msgid="8125427921655194973">"动画缩放 1.5x"</item>
     <item msgid="3334024790739189573">"动画缩放 2x"</item>
