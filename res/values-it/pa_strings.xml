@@ -17,6 +17,8 @@
    limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="profile_reset_title">Ripristina</string>
+  <string name="profile_reset_message">Eliminare tutti i profili e i gruppi di applicazioni creati e ripristinare quelli di default?</string>
   <string name="notification_category">Notifiche</string>
   <string name="notification_peek_title">Notifica peek</string>
   <string name="notification_peek_summary">Mostra l\'ultima notifica dopo aver preso il tuo dispositivo</string>
@@ -54,6 +56,12 @@
   <string name="pulse_speed_normal">Normale</string>
   <string name="pulse_speed_slow">Lento</string>
   <string name="pulse_speed_very_slow">Molto lento</string>
+  <string name="battery_light_title">LED della batteria</string>
+  <string name="battery_low_pulse_title">Pulsa se bassa batteria</string>
+  <string name="battery_light_list_title">Colori</string>
+  <string name="battery_light_low_color_title">Poca batteria</string>
+  <string name="battery_light_medium_color_title">In carica</string>
+  <string name="battery_light_full_color_title">Completamente carico</string>
   <string name="volume_adjust_sounds_enable_summary">Emetti un suono alla regolazione della suoneria con i pulsanti del volume</string>
   <string name="link_volume_ringtones">Collega volume suoneria &amp; e notifiche</string>
   <string name="volume_ring_only_description">Suoneria</string>
@@ -84,8 +92,21 @@
   <string name="battery_bar_percent">Barra &amp; percentuale</string>
   <string name="battery_circle">Cerchio</string>
   <string name="battery_circle_percent">Cerchio &amp; percentuale</string>
+  <string name="battery_hidden">Nascosta</string>
   <string name="custom_runtime_warning_title">Attenzione</string>
   <string name="security_maximize_widgets_title">Massimizza widget</string>
+  <string name="font_size_sample">Esempio</string>
+  <string name="status_bar_double_tap_to_sleep_title">Doppio tocco per spegnere</string>
+  <string name="status_bar_double_tap_to_sleep_summary">Doppio tocco sulla barra di stato per bloccare il dispositivo</string>
+  <string name="power_menu_screenrecord_title">Attiva screen record</string>
+  <string name="screen_recorder_title">Screen recorder</string>
+  <string name="screen_recorder_summary">Regola valori screen recorder</string>
+  <string name="screen_recorder_video_dimensions_title">Grandezza video</string>
+  <string name="screen_recorder_video_bitrate_title">Bitrate</string>
+  <string name="screen_recorder_record_audio_title">Registra audio</string>
+  <string name="screen_recorder_record_audio_summary">Registra audio dal microfono</string>
+  <string name="storage_rescan_media">Scansione dei media</string>
+  <string name="storage_rescan_media_complete">Scansione completa</string>
   <string name="ime_switcher_notify">Selettore notifica</string>
   <string name="ime_switcher_notify_summary">Mostra la notifica per il metodo di immissione</string>
   <string name="root_access">Accesso root</string>
@@ -115,12 +136,21 @@
   <string name="pa_version">Versione ParanoidAndroid</string>
   <string name="pa_version_default">Sconosciuta</string>
   <string name="themes_settings_title">Temi</string>
-  <string name="themepacks_settings_title">Pacchetti Temi</string>
+  <string name="themepacks_settings_title">Temi</string>
   <string name="styles_settings_title">Stili</string>
   <string name="icons_settings_title">Icone</string>
-  <string name="fonts_settings_title">Fonts</string>
+  <string name="fonts_settings_title">Font</string>
   <string name="wallpaper_settings_title">Sfondi</string>
-  <string name="lockscreen_wallpaper_settings_title">Sfondi Lockscreen</string>
+  <string name="lockscreen_wallpaper_settings_title">Sfondi lockscreen</string>
   <string name="bootanim_settings_title">Animazioni di avvio</string>
-  <string name="soundpack_settings_title">Pacchetti Suoni</string>
+  <string name="soundpack_settings_title">Pacchetti suoni</string>
+  <string name="keep_screen_on_summary_pa">Lo schermo non si spegne mai se in carica</string>
+  <plurals name="show_dev_countdown_pa">
+      <item quantity="one">Ti manca <xliff:g id="step_count">%1$d</xliff:g> tocco per le opzioni sviluppatore.</item>
+      <item quantity="other">Ti mancano <xliff:g id="step_count">%1$d</xliff:g> tocchi per le opzioni sviluppatore.</item>
+  </plurals>
+  <string name="show_dev_on_pa">Hai attivato le opzioni sviluppatore</string>
+  <string name="show_dev_already_pa">Non ce n'è bisogno, hai già attivato le opzioni sviluppatore.</string>
+  <string name="enable_adb_pa">Debug USB</string>
+  <string name="enable_adb_summary_pa">Attiva l'interfaccia Android Debug Bridge(ADB)</string>
 </resources>
