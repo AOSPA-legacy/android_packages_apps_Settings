@@ -16,17 +16,28 @@
 
 package com.android.settings.PALP;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
+import com.android.settings.hardware.VibratorIntensity;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settings.R;
 
 public class GeneralLP extends SettingsPreferenceFragment {
 
+    private static final String KEY_SENSORS_MOTORS_CATEGORY = "sensors_motors_category";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.general_lp_settings);
+
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (!VibratorIntensity.isSupported() || vibrator == null || !vibrator.hasVibrator()) {
+            removePreference(KEY_SENSORS_MOTORS_CATEGORY);
+        }
+
     }
 }

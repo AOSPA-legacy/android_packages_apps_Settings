@@ -30,5 +30,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="sensors_motors_category"
+        android:title="@string/sensors_motors_title" >
+
+        <com.android.settings.hardware.VibratorIntensity
+            android:key="vibration_intensity"
+            android:title="@string/vibrator_intensity_title"
+            android:dialogTitle="@string/vibrator_intensity_title"
+            android:persistent="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

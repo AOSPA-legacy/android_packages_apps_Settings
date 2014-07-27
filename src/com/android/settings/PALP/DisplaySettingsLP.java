@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
+import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -33,6 +34,8 @@ import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 
+import com.android.settings.hardware.DisplayColor;
+import com.android.settings.hardware.DisplayGamma;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
@@ -53,6 +56,9 @@ public class DisplaySettingsLP extends SettingsPreferenceFragment implements
     private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String KEY_SCREEN_GESTURE_SETTINGS = "touch_screen_gesture_settings";
     private static final String KEY_ADVANCED_SETTINGS = "oppo_advanced_settings";
+    private static final String KEY_DISPLAY_CALIBRATION_CATEGORY = "display_calibration_category";
+    private static final String KEY_DISPLAY_COLOR = "color_calibration";
+    private static final String KEY_DISPLAY_GAMMA = "gamma_tuning";
 
     private PreferenceScreen mScreenColorSettings;
 
@@ -85,6 +91,20 @@ public class DisplaySettingsLP extends SettingsPreferenceFragment implements
 
         mWakeWhenPluggedOrUnplugged =
                 (CheckBoxPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
+
+        final PreferenceGroup calibrationCategory =
+                (PreferenceGroup) findPreference(KEY_DISPLAY_CALIBRATION_CATEGORY);
+
+        if (!DisplayColor.isSupported() && !DisplayGamma.isSupported()) {
+            getPreferenceScreen().removePreference(calibrationCategory);
+        } else {
+            if (!DisplayColor.isSupported()) {
+                calibrationCategory.removePreference(findPreference(KEY_DISPLAY_COLOR));
+            }
+            if (!DisplayGamma.isSupported()) {
+                calibrationCategory.removePreference(findPreference(KEY_DISPLAY_GAMMA));
+            }
+        }
 
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_ADVANCED_DISPLAY_SETTINGS);
