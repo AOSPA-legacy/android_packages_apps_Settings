@@ -18,6 +18,7 @@
 package com.android.settings;
 
 import com.android.settings.bluetooth.DockEventReceiver;    
+import com.android.settings.hardware.VibratorIntensity;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -77,6 +78,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOCK_AUDIO_SETTINGS = "dock_audio";
     private static final String KEY_DOCK_SOUNDS = "dock_sounds";
     private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
+    private static final String KEY_VIBRATION_INTENSITY = "vibration_intensity";
 
     private static final String[] NEED_VOICE_CAPABILITY = {
             KEY_RINGTONE, KEY_DTMF_TONE, KEY_CATEGORY_CALLS,
@@ -232,6 +234,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 }
             }
         };
+
+        if (!VibratorIntensity.isSupported() || vibrator == null || !vibrator.hasVibrator()) {
+            removePreference(KEY_VIBRATION_INTENSITY);
+        }
 
         initDockSettings();
     }
