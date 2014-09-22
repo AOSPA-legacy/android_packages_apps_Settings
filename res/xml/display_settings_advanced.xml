@@ -78,8 +78,7 @@
     <CheckBoxPreference
         android:key="double_tap_wake_gesture"
         android:title="@string/double_tap_to_wake_title"
-        android:summary="@string/double_tap_to_wake_summary"
-        android:defaultValue="false" />
+        android:summary="@string/double_tap_to_wake_summary" />
 
     <CheckBoxPreference
         android:key="wake_when_plugged_or_unplugged"
