@@ -105,6 +105,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_TRUST_AGENT = "trust_agent";
     private static final String KEY_SCREEN_PINNING = "screen_pinning_settings";
 
+    //QS
+    private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
+
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
             KEY_LOCK_ENABLED, KEY_VISIBLE_PATTERN, KEY_BIOMETRIC_WEAK_LIVELINESS,
@@ -131,6 +134,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private DialogInterface mWarnInstallApps;
     private SwitchPreference mPowerButtonInstantlyLocks;
 
+    private SwitchPreference mBlockOnSecureKeyguard;
+
     private boolean mIsPrimary;
 
     private Intent mTrustAgentClickIntent;
@@ -140,6 +145,15 @@ public class SecuritySettings extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
 
         mLockPatternUtils = new LockPatternUtils(getActivity());
+        //QS
+        mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
+        if (mLockPatternUtils.isSecure()) {
+            mBlockOnSecureKeyguard.setChecked(Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1) == 1);
+            mBlockOnSecureKeyguard.setOnPreferenceChangeListener(this);
+        } /*else {
+            prefs.removePreference(mBlockOnSecureKeyguard);
+        }*/
 
         mDPM = (DevicePolicyManager)getSystemService(Context.DEVICE_POLICY_SERVICE);
 
@@ -580,6 +594,11 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     Settings.System.TEXT_SHOW_PASSWORD, 1) != 0);
         }
 
+        if (mBlockOnSecureKeyguard != null) {
+            mBlockOnSecureKeyguard.setChecked(Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1) != 0);
+        }
+
         if (mResetCredentials != null) {
             mResetCredentials.setEnabled(!mKeyStore.isEmpty());
         }
@@ -689,6 +708,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
             mLockPatternUtils.setPowerButtonInstantlyLocks((Boolean) value);
         } else if (KEY_SHOW_PASSWORD.equals(key)) {
             Settings.System.putInt(getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD,
+                    ((Boolean) value) ? 1 : 0);
+        } else if (PREF_BLOCK_ON_SECURE_KEYGUARD.equals(key)) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
                     ((Boolean) value) ? 1 : 0);
         } else if (KEY_TOGGLE_INSTALL_APPLICATIONS.equals(key)) {
             if ((Boolean) value) {
